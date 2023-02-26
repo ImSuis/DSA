@@ -41,7 +41,7 @@ public class ScheduleJobScreen extends JFrame implements ActionListener {
             Class.forName("com.mysql.cj.jdbc.Driver");
             // establishing connection in the connection object
             Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/assignment",
+                    "jdbc:mysql://localhost:3306/dsaassignment",
                     username,
                     password);
             PreparedStatement statement = connection.prepareStatement("SELECT jobId FROM taskscreen");
@@ -101,7 +101,7 @@ public class ScheduleJobScreen extends JFrame implements ActionListener {
                     String password = null;
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection connection = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/assignment",
+                            "jdbc:mysql://localhost:3306/dsaassignment",
                             username,
                             password);
                     String query = "INSERT INTO job_schedule (job_id, start_time) VALUES (?, ?)";
@@ -124,7 +124,7 @@ public class ScheduleJobScreen extends JFrame implements ActionListener {
                                     String password = null;
                                     Class.forName("com.mysql.cj.jdbc.Driver");
                                     Connection connection = DriverManager.getConnection(
-                                            "jdbc:mysql://localhost:3306/assignment",
+                                            "jdbc:mysql://localhost:3306/dsaassignment",
                                             username,
                                             password);
                                     String query = "DELETE FROM job_schedule WHERE job_id = ?";

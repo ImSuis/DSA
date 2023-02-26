@@ -42,7 +42,7 @@ public class AddTaskScreen extends JFrame implements ActionListener {
             Class.forName("com.mysql.cj.jdbc.Driver");
             // establishing connection in the connection object
             Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/assignment",
+                    "jdbc:mysql://localhost:3306/dsaassignment",
                     username,
                     password);
             PreparedStatement statement = connection.prepareStatement("SELECT jobId FROM job");
@@ -69,7 +69,7 @@ public class AddTaskScreen extends JFrame implements ActionListener {
             String username = "root";
             String password = null;
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/assignment", username, password);
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dsaassignment", username, password);
             PreparedStatement statement = connection.prepareStatement("SELECT taskName FROM task");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -94,7 +94,7 @@ public class AddTaskScreen extends JFrame implements ActionListener {
             String username = "root";
             String password = null;
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/assignment", username, password);
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dsaassignment", username, password);
             PreparedStatement statement = connection.prepareStatement("SELECT taskName FROM task");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
